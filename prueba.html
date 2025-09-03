@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gang Database Tabs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Contenedor del menú */
+    .tab-menu {
+      display: flex;
+      background: #0b3c6e;
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+    }
+
+    .tab-menu button {
+      flex: 1;
+      padding: 12px;
+      color: white;
+      background: #0b3c6e;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 16px;
+    }
+
+    .tab-menu button:hover {
+      background: #145ca6;
+    }
+
+    .tab-menu button.active {
+      background: #1a73e8;
+      font-weight: bold;
+    }
+
+    /* Contenido de cada tab */
+    .tab-content {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú -->
+  <div class="tab-menu">
+    <button class="tab-button active" data-tab="gang">GANG DATABASE</button>
+    <button class="tab-button" data-tab="record">NEW RECORD</button>
+    <button class="tab-button" data-tab="step">STEP ACT</button>
+  </div>
+
+  <!-- Contenido -->
+  <div id="gang" class="tab-content active">
+    <h2>San Andreas Gang Database</h2>
+    <p>Aquí iría tu buscador con los campos de <b>nombre, apodo, pandilla, oficial</b>, etc.</p>
+  </div>
+
+  <div id="record" class="tab-content">
+    <h2>Nuevo Registro</h2>
+    <p>Formulario para ingresar un nuevo registro en la base de datos.</p>
+  </div>
+
+  <div id="step" class="tab-content">
+    <h2>STEP ACT</h2>
+    <p>Información y herramientas relacionadas con el STEP Act.</p>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        // Quitar clase activa a todos
+        buttons.forEach(b => b.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        // Activar el botón clickeado y su contenido
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
