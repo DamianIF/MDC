@@ -54,7 +54,35 @@
                 </div>
                 <div class="informacion__gang">
                     <div class="titulo__sangang">
-                        <p>San Andreas Gang Database</p>
+                        San Andreas Gang Database
+                    </div>
+                </div>
+                <div class="ventana__sangang">
+                    <div class="buscador">
+                        <input type="text" id="buscarNombre" placeholder="Subject Name">
+                        <input type="text" id="buscarApodo" placeholder="Subject Moniker">
+                        <input type="text" id="buscarGang" placeholder="Subject Gang">
+                        <input type="text" id="buscarOficial" placeholder="By Officer">
+
+                        <select id="agencia">
+                            <option value="">AGENCY</option>
+                            <option value="police">LSPD</option>
+                            <option value="sheriff">LSSD</option>
+                            <option value="patrol">SAHP</option>
+                            <option value="fbi">FBI</option>
+                            <option value="dea">DEA</option>
+                            <option value="atf">ATF</option>
+                        </select>
+                        <select id="status">
+                            <option value="">STATUS</option>
+                            <option value="active">ACTIVE</option>
+                            <option value="inactive">INACTIVE</option>
+                        </select>
+
+                        <button class="clear" onclick="limpiarCampos()"><i class="bi bi-eraser-fill"></i>CLEAR FIELDS</button>
+                    </div>
+                    <div class="tabla__datos">
+                        
                     </div>
                 </div>
             </section>
