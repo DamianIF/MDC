@@ -22,6 +22,7 @@ body {
         .navegador {
             background-color: white;
             width: 400px;
+            height: auto;
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -30,7 +31,7 @@ body {
             left: 0;
             bottom: 0;
             box-shadow: 5px 0 15px #555;
-            overflow-y: visible;
+            overflow-y: auto;
         }
         .navegador i {
             color: rgb(60, 72, 88);
@@ -155,9 +156,25 @@ body {
         }
 
         .barra__prin button:hover {
-            background: #2768F5;
+            background: #335a81;
             color: white;
             border-radius: 5px;
+        }
+
+        .contenido {
+            display: flex;
+            background-color: #0b3c6e;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 20px;
+            margin-left: 470px;
+            margin-right: 50px;
+        }
+
+        .titulo__sangang {
+            color: white;
+            font-size: 22px;
+            padding-left: 20px;
         }
 
         @keyframes fadeIn {
